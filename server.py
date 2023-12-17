@@ -46,6 +46,7 @@ def start():
             thread = threading.Thread(target=handle_client, args=(conn, addr))
             thread.start()
     except:
+        print("Closing server")
         server.close()
 
 redisCommandsSet = redisCommands()
